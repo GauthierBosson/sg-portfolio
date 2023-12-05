@@ -1,5 +1,4 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type {LinksFunction} from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -7,12 +6,26 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import stylesheet from "~/tailwind.css";
-
+} from '@remix-run/react';
+import stylesheet from '~/tailwind.css';
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
+  {rel: 'stylesheet', href: stylesheet},
+  {
+    rel: 'preconnect',
+    href: 'https://fonts.googleapis.com',
+    crossOrigin: undefined,
+  },
+  {
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
+    crossOrigin: undefined,
+  },
+  {
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Gabarito&display=swap',
+    crossOrigin: undefined,
+  },
 ];
 
 export default function App() {
